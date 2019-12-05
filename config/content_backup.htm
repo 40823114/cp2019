@@ -12,11 +12,45 @@
 <p></p>
 <h1>常微分方程式</h1>
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=cf71eee268f1dc3e80a7ac5b527a1c67" width="800"></iframe></p>
-<img alt="" height="362" src="/images/有阻尼.png" width="598"/>
+<p><img alt="" height="362" src="/images/有阻尼.png" width="598"/></p>
 <h4 style="text-align: center;">有阻尼</h4>
-<img alt="" height="363" src="/images/沒阻尼.png" width="601"/>
+<p><img alt="" height="363" src="/images/沒阻尼.png" width="601"/></p>
 <h4 style="text-align: center;">沒阻尼</h4>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<p></p>
+<h1 style="text-align: center;">第十周分組任務</h1>
+<pre>&lt;script&gt;
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/" + dirname + "&amp;theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/" + dirname + "&amp;theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/" + dirname + "&amp;theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+&lt;/script&gt;
+&lt;!-- 取 Dart 程式的按鈕 --&gt;
+&lt;h4&gt;純 Dart 程式&lt;/h4&gt;
+&lt;p&gt;&lt;button onclick="getDart('hello')"&gt;Hello&lt;/button&gt; &lt;button onclick="getDart('for')"&gt;For Loop&lt;/button&gt; &lt;button onclick="getDart('sum')"&gt;Sum&lt;/button&gt; &lt;button onclick="getDart('runge_kutta')"&gt;Runge-Kutta&lt;/button&gt; &lt;button onclick="getDart('rk_ex1')"&gt;RK ex1&lt;/button&gt; &lt;button onclick="getDart('mass_spring_damping')"&gt;Mass Spring Damping&lt;/button&gt; &lt;button onclick="getDart('function')"&gt;Function&lt;/button&gt; &lt;button onclick="getDart('fun_parameter')"&gt;Function Parameter&lt;/button&gt; &lt;button onclick="getDart('fat_arrow')"&gt;Fat Arrow&lt;/button&gt; &lt;button onclick="getDart('temp1')"&gt;Temp 1&lt;/button&gt;&lt;/p&gt;
+&lt;h4&gt;Html 程式&lt;/h4&gt;
+&lt;p&gt;&lt;button onclick="getHtmlDart('roc_flag')"&gt;ROC Flag&lt;/button&gt; &lt;button onclick="getHtmlDart('grid')"&gt;Grid&lt;/button&gt; &lt;button onclick="getHtmlDart('xyplot')"&gt;X-Y Plot&lt;/button&gt; &lt;button onclick="getHtmlDart('slithery')"&gt;Slithery&lt;/button&gt;&lt;/p&gt;
+&lt;h4&gt;Flutter 程式&lt;/h4&gt;
+&lt;p&gt;&lt;button onclick="getFlutter('flutter0')"&gt;Flutter0&lt;/button&gt; &lt;button onclick="getFlutter('flutter1')"&gt;Flutter1&lt;/button&gt; &lt;button onclick="getFlutter('flutter2')"&gt;Flutter2&lt;/button&gt; &lt;button onclick="getFlutter('flutter3')"&gt;Flutter3&lt;/button&gt; &lt;button onclick="getFlutter('flutter4')"&gt;Flutter4&lt;/button&gt; &lt;button onclick="getFlutter('flutter_counter')"&gt;Flutter Counter&lt;/button&gt; &lt;button onclick="getFlutter('flutter_roc')"&gt;ROC Flag&lt;/button&gt; &lt;button onclick="getFlutter('flutter_mine1')"&gt;踩地雷 1&lt;/button&gt; &lt;button onclick="getFlutter('flutter_mine2')"&gt;踩地雷 2&lt;/button&gt; &lt;button onclick="getFlutter('flutter_mine3')"&gt;踩地雷 3&lt;/button&gt; &lt;button onclick="getFlutter('flutter_mine4')"&gt;踩地雷 4&lt;/button&gt; &lt;button onclick="getFlutter('flutter_dropdown')"&gt;Dropdown&lt;/button&gt; &lt;button onclick="getFlutter('flutter_multiselect')"&gt;Multiselect&lt;/button&gt; &lt;button onclick="getFlutter('flutter_search')"&gt;Search&lt;/button&gt; &lt;button onclick="getFlutter('flutter_login')"&gt;Login&lt;/button&gt; &lt;button onclick="getFlutter('flutter_temp')"&gt;溫度轉換&lt;/button&gt;&lt;/p&gt;
+&lt;!-- 內建放入的 Dart 原始碼 --&gt;
+&lt;p&gt;&lt;button onclick="largest()"&gt;放大&lt;/button&gt; &lt;button onclick="original()"&gt;回復&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823114&amp;amp;gh_repo=cp2019&amp;amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;amp;theme=dark" width="800"&gt;&lt;/iframe&gt;&lt;/p&gt;</pre>
